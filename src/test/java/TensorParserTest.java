@@ -6,7 +6,7 @@ import org.tensorics.core.tensor.TensorBuilder;
 
 import static org.tensorics.core.lang.Tensorics.at;
 
-public class TensorEntityTest {
+public class TensorParserTest {
 
 
     //variables for testing methods, declared globally

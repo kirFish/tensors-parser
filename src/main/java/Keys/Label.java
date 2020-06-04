@@ -1,4 +1,4 @@
 package Keys;
 
-public class FirstKey{
+public class Label {
 }

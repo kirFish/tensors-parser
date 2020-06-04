@@ -1,54 +1,39 @@
+import org.tensorics.core.tensor.Tensor;
+
 public interface TensorParserImplementation {
-    public org.tensorics.core.tensor.Tensor<Double> extractSubTensor(){
-        return null;
-    }
+
+    //TODO: describe this method
+    Tensor<Double> extractSubTensor();
 
 
-
-    public org.tensorics.core.tensor.Tensor<Double> mathematicalStructures(){
-        return null;
-    }
-
+    //TODO: divide this method into some more
+    //TODO: describe this method
+    Tensor<Double> mathematicalStructures();
 
 
-    //one argument operation like
-    //mod
-    public org.tensorics.core.tensor.Tensor<Double> unaryOperations(){
-        return null;
-    }
+    //TODO: describe this method
+    //TODO: divide this method into some more
+    Tensor<Double> unaryOperations();
 
 
-
-    // as well one argument operation which gives
-    public org.tensorics.core.tensor.Tensor<Double> basicStatistics(){
-    }
-
+    //TODO: describe this method
+    //TODO: divide this method into some more
+    Tensor<Double> basicStatistics();
 
 
+    //TODO: describe this method
+    //TODO: divide this method into some more
+    Tensor<Double> binaryOperations();
 
 
-    //
-    public org.tensorics.core.tensor.Tensor<Double> binaryOperations(){
-        return null;
-    }
+    //TODO: describe this method
+    Tensor<Double> reshapeTensor();
 
 
+    //TODO: describe this method
+    Tensor<Double> broadcast();
 
 
-
-    public org.tensorics.core.tensor.Tensor<Double> reshapingTensor(){
-        return null;
-    }
-
-
-
-    public org.tensorics.core.tensor.Tensor<Double> broadcasting(){
-        return null;
-    }
-
-
-
-    public org.tensorics.core.tensor.Tensor<Double> innerProduct(){
-        return null;
-    }
+    //TODO: describe this method
+    Tensor<Double> innerProduct();
 }
