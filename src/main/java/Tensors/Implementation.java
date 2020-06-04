@@ -1,6 +1,18 @@
+package Tensors;
+
 import org.tensorics.core.tensor.Tensor;
 
-public interface TensorParserImplementation {
+
+/**
+ * This interface contains all the methods,
+ * which are needed in work with tensors
+ *
+ * Actually most of them are method described on
+ * "Tensor Operations" page of tensorics doc
+ */
+public interface Implementation {
+
+
 
     //TODO: describe this method
     Tensor<Double> extractSubTensor();
