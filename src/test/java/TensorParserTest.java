@@ -6,7 +6,7 @@ import org.tensorics.core.tensor.TensorBuilder;
 
 import static org.tensorics.core.lang.Tensorics.at;
 
-public class TensorsTest {
+public class TensorEntityTest {
 
 
     //variables for testing methods, declared globally
@@ -57,11 +57,12 @@ public class TensorsTest {
             }
         }
         secondTensor= builder2.build();
+        System.out.println("Creation successful)");
     }
 
     @Test
     public void extractSubTensor() {
-        assertEquals();
+
     }
 
     @Test
