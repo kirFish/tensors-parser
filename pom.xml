@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>TensorsWorker</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <tensorics-core.version>0.0.64</tensorics-core.version>
+        <tensorics-expression.version>0.0.2</tensorics-expression.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- JUnit stuff-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Tensorics-->
+        <dependency>
+            <groupId>org.tensorics</groupId>
+            <artifactId>tensorics-core</artifactId>
+            <version>${tensorics-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tensorics</groupId>
+            <artifactId>tensorics-expression</artifactId>
+            <version>${tensorics-expression.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+</project>
