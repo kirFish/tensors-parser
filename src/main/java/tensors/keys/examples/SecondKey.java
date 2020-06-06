@@ -1,6 +1,6 @@
-package Keys.examples;
+package Tensors.Keys.examples;
 
-import Keys.Key;
+import Tensors.Keys.Key;
 
 //this is second unique key for the tensor
 public class SecondKey extends Key {

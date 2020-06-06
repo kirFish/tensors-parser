@@ -1,12 +1,6 @@
 package Tensors;
 
-import Keys.SecondKey;
-import Keys.FirstKey;
-import org.junit.Before;
 import org.junit.Test;
-import org.tensorics.core.lang.Tensorics;
-import org.tensorics.core.tensor.Tensor;
-import org.tensorics.core.tensor.TensorBuilder;
 
 import static org.tensorics.core.lang.Tensorics.at;
 

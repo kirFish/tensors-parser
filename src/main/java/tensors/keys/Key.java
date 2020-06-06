@@ -1,4 +1,4 @@
-package Keys;
+package Tensors.Keys;
 
 public class Key {
 

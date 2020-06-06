@@ -1,6 +1,6 @@
-package Keys.examples;
+package Tensors.Keys.examples;
 
-import Keys.Key;
+import Tensors.Keys.Key;
 
 public class ThirdKey extends Key {
 

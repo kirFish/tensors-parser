@@ -1,14 +1,9 @@
 package Tensors;
 
-import Keys.FirstKey;
-import Keys.SecondKey;
-import org.tensorics.core.lang.Tensorics;
+
 import org.tensorics.core.tensor.Tensor;
-import org.tensorics.core.tensor.TensorBuilder;
 
-import static org.tensorics.core.lang.Tensorics.at;
-
-public class Parser implements Implementation {
+public class Worker implements Implementation {
 
     public Tensor<Double> extractSubTensor() {
         return null;
