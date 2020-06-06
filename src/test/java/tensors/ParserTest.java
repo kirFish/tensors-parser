@@ -1,4 +1,4 @@
-package Tensors;
+package tensors;
 
 import org.junit.Test;
 

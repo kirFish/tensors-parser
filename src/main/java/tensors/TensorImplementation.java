@@ -1,4 +1,4 @@
-package Tensors;
+package tensors;
 
 import org.tensorics.core.tensor.Tensor;
 
@@ -10,8 +10,7 @@ import org.tensorics.core.tensor.Tensor;
  * Actually most of them are method described on
  * "Tensor Operations" page of tensorics doc
  */
-public interface Implementation {
-
+public interface TensorImplementation {
 
 
     //TODO: describe this method
@@ -21,6 +20,22 @@ public interface Implementation {
     //TODO: divide this method into some more
     //TODO: describe this method
     Tensor<Double> mathematicalStructures();
+
+
+    //TODO: not yet implemented
+    Tensor<Double> addTensors();
+
+
+    //TODO: not yet implemented
+    Tensor<Double> subtractTensors();
+
+
+    //TODO: not yet implemented
+    Tensor<Double> multiplierTensors();
+
+
+    //TODO: not yet implemented
+    Tensor<Double> divideTensors();
 
 
     //TODO: describe this method
@@ -48,4 +63,6 @@ public interface Implementation {
 
     //TODO: describe this method
     Tensor<Double> innerProduct();
+
+
 }

@@ -1,8 +1,11 @@
-package Tensors.Keys.examples;
+package tensors.keys.examples;
 
-import Tensors.Keys.Key;
+import tensors.keys.Key;
 
 public class ThirdKey extends Key {
+
+    public ThirdKey() {
+    }
 
     public ThirdKey(String value) {
         super(value);
