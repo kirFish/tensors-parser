@@ -7,16 +7,12 @@ import tensors.keys.examples.ThirdKey;
 import org.tensorics.core.lang.Tensorics;
 import org.tensorics.core.tensor.Tensor;
 import org.tensorics.core.tensor.TensorBuilder;
+import tensors.service.Constants;
+
+import static org.tensorics.core.lang.Tensorics.at;
 
 
-public class Initializer implements InitializerImplementation{
-
-    /**
-     * @Keys are the array of keys of the tensors
-     * @builder is the object who is responsible for
-     * */
-    private Key[] keys;
-    private TensorBuilder<Double> builder;
+public class Initializer {
 
     /**
      * @dimensionNumber
@@ -30,10 +26,21 @@ public class Initializer implements InitializerImplementation{
      * @inputTensor
      * tells if there's a tensor need
      * */
-    public byte dimensionNumber;
+    public byte dimensionsNumber;
     public boolean ifNegativeTensor;
-//    Tensor<Double> inputTensor;
 
+    //Constructor of the initializer says which thing are vital for creating a tensor
+    public Initializer(byte dimensionsNumber, boolean ifNegativeTensor){
+        this.dimensionsNumber = dimensionsNumber;
+        this.ifNegativeTensor = ifNegativeTensor;
+    }
+
+    /**
+     * @Keys are the array of keys of the tensor
+     * @builder is the object who is responsible for
+     * */
+    private final Key[] keys = Key.createKeys(dimensionsNumber);
+    private final TensorBuilder<Double> builder = setBuilder();
 
 
     //main method for creation of tensor
@@ -41,14 +48,30 @@ public class Initializer implements InitializerImplementation{
      If it's true method will create tensor with all the values < 0
      @return Tensor<Double> with <PrimaryKey,SecondaryKey>
      */
-    public Tensor<Double> initTensor(){
+    public Tensor<Double> initTensor()
+    {
 
-        Key[] keys = Key.createKeys();
-        TensorBuilder<Double> builder = setBuilder(keys);
+        switch(dimensionsNumber){
 
-        mainLoop();
+            //technically this is not the tensor because
+            case 0:
+                FirstKey firstKey = new FirstKey("nothing");
+                builder.put(at(firstKey), (double)1);
+            case 1:
+
+            case 2:
+                initTwoDimensions();
+            case 3:
+
+
+
+        }
 
         return builder.build();
+    }
+
+    private void initTwoDimensions() {
+
     }
 
 
@@ -56,16 +79,15 @@ public class Initializer implements InitializerImplementation{
      *
      * */
     //the loop which assigns the values to the tensor cells
-    private TensorBuilder<Double> mainLoop(){
+    private void mainLoop(byte currentKeyNumber){
 
-        return builder;
     }
 
 
-    // it initializes the dimension with corresponding number
-    private TensorBuilder<Double> initDimensionNumber(){
+    // it initializes the line in tensor with corresponding number
+    private void initTensorLine(){
 
-        return builder;
+
     }
 
 

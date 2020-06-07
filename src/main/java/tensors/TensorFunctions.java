@@ -10,7 +10,7 @@ import org.tensorics.core.tensor.Tensor;
  * Actually most of them are method described on
  * "Tensor Operations" page of tensorics doc
  */
-public interface TensorImplementation {
+public interface TensorFunctions {
 
 
     //TODO: describe this method

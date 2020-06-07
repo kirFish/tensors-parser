@@ -14,18 +14,18 @@ import org.tensorics.core.tensor.Tensor;
  * */
 public class TensorEntity {
 
-
      //the value of "n" letter which affects the number of original keys to be done
      public String dimension;
 
-
-     //this is just a tensor because it can contain as many as needed
+     /*
+     this is just a tensor because it can contain as many as needed
      public Tensor inputTensors;
+     */
 
 
      //the list in that constructor must be a List<Token> in future for the project needs
      public TensorEntity(String dimension, String[] operationArray, org.tensorics.core.tensor.Tensor<Double> inputTensors) {
           this.dimension = dimension;
-          this.inputTensors = inputTensors;
+//          this.inputTensors = inputTensors;
      }
 }

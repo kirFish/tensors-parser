@@ -3,7 +3,7 @@ package tensors;
 
 import org.tensorics.core.tensor.Tensor;
 
-public class Worker implements TensorImplementation {
+public class Worker implements TensorFunctions {
 
 
     //The array which will figure out which interface methods must be called
