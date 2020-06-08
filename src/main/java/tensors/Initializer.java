@@ -14,6 +14,7 @@ import static org.tensorics.core.lang.Tensorics.at;
 
 public class Initializer {
 
+
     /**
      * @dimensionNumber
      * means how many keys tensors
@@ -29,11 +30,13 @@ public class Initializer {
     public byte dimensionsNumber;
     public boolean ifNegativeTensor;
 
+
     //Constructor of the initializer says which thing are vital for creating a tensor
     public Initializer(byte dimensionsNumber, boolean ifNegativeTensor){
         this.dimensionsNumber = dimensionsNumber;
         this.ifNegativeTensor = ifNegativeTensor;
     }
+
 
     /**
      * @Keys are the array of keys of the tensor
@@ -43,52 +46,108 @@ public class Initializer {
     private final TensorBuilder<Double> builder = setBuilder();
 
 
-    //main method for creation of tensor
+    //main method for initialization of tensor
     /**
      If it's true method will create tensor with all the values < 0
      @return Tensor<Double> with <PrimaryKey,SecondaryKey>
      */
-    public Tensor<Double> initTensor()
-    {
+//    public Tensor<Double> initTensor()
+//    {
+//
+//        //special case because we can't create a tensor with zero keys
+//        //technically it is tensor but in fact it's just a scalar
+//        //so one empty key is created
+//        if(dimensionsNumber == 0) {
+//
+//            FirstKey firstKey = new FirstKey();
+//            builder.put(at(firstKey), (double)1);
+//
+//        }else{
+//            switch(keys.length){
+//                case 1:
+//                    initOneDimensional();
+//                    break;
+//                case 2:
+//                    initTwoDimensions();
+//                    break;
+//                case 3:
+//                    initThreeDimension();
+//                    break;
+//            }
+//
+//        }
+//
+//
+//        //this line is just for better understanding
+//        //the builder.build could easily be the return value
+//        Tensor<Double> tensor = builder.build();
+//        return tensor;
+//    }
 
-        switch(dimensionsNumber){
 
-            //technically this is not the tensor because
-            case 0:
-                FirstKey firstKey = new FirstKey("nothing");
-                builder.put(at(firstKey), (double)1);
-            case 1:
-
-            case 2:
-                initTwoDimensions();
-            case 3:
+    //algorithm for the one dimension
+    //(array)
+//    private void initOneDimensional() {
+//        Key[] whoToInit = new Key[]{new FirstKey()};
+//        int[][] numberOfLineToInit = new int[][]{{0},{0}};
+//        initTensorLine(numberOfLineToInit);
+//    }
 
 
+    //algorithm for the two dimensions
+    //(matrix)
+//    private void initTwoDimensions() {
+//        Key[] whoToInit = new Key[]{new FirstKey()};
+//
+//        for (int i = 0; i <Constants.TENSOR_LENGTH_FOR_EACH_KEY; i++) {
+//            initTensorLine();
+//        }
+//    }
 
-        }
 
-        return builder.build();
-    }
-
-    private void initTwoDimensions() {
-
-    }
+//    //algorithm for three dimensions
+//    //(array of matrix) or cube
+//    private void initThreeDimension() {
+//        Key[] whoToInit = new Key[]{new FirstKey()};
+//
+//        for (int i = 0; i < Constants.TENSOR_LENGTH_FOR_EACH_KEY; i++) {
+//
+//            for (int j = 0; j <Constants.TENSOR_LENGTH_FOR_EACH_KEY; j++) {
+//
+//            }
+//        }
+//    }
 
 
     /**
-     *
+     * * @param index
      * */
-    //the loop which assigns the values to the tensor cells
-    private void mainLoop(byte currentKeyNumber){
-
-    }
-
-
     // it initializes the line in tensor with corresponding number
-    private void initTensorLine(){
+    private void initTensorLine(int[][] numberOfLineToInit, byte whichToInit){
 
+
+
+
+        for (int i = 0; i < Constants.TENSOR_LENGTH_FOR_EACH_KEY; i++) {
+            double value = i;
+
+            Key[] position  = Key.setKeys(new int[]{i}, keys);
+
+            switch(dimensionsNumber){
+                case 1:
+                    builder.put(at(position[0]), value);
+                    break;
+                case 2:
+                    builder.put(at(position[0], position[1]), value);
+                    break;
+                case 3:
+                    builder.put(at(position[0], position[1], position[2]), value);
+                    break;
+            }
+         }
 
     }
+
 
 
     /**

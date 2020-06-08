@@ -17,25 +17,20 @@ public interface TensorFunctions {
     Tensor<Double> extractSubTensor();
 
 
-    //TODO: divide this method into some more
-    //TODO: describe this method
-    Tensor<Double> mathematicalStructures();
+    //TODO: not yet implemented
+    Tensor<Double> addTensors(Tensor<Double> tensor1, Tensor<Double> tensor2);
 
 
     //TODO: not yet implemented
-    Tensor<Double> addTensors();
+    Tensor<Double> subtractTensors(Tensor<Double> tensor1, Tensor<Double> tensor2);
 
 
     //TODO: not yet implemented
-    Tensor<Double> subtractTensors();
+    Tensor<Double> multiplyTensors(Tensor<Double> tensor1, Tensor<Double> tensor2);
 
 
     //TODO: not yet implemented
-    Tensor<Double> multiplierTensors();
-
-
-    //TODO: not yet implemented
-    Tensor<Double> divideTensors();
+    Tensor<Double> divideTensors(Tensor<Double> tensor1, Tensor<Double> tensor2);
 
 
     //TODO: describe this method
@@ -45,7 +40,7 @@ public interface TensorFunctions {
 
     //TODO: describe this method
     //TODO: divide this method into some more
-    Tensor<Double> basicStatistics();
+    Tensor<Double> basicStatistics(Tensor<Double> tensor1);
 
 
     //TODO: describe this method
@@ -62,7 +57,7 @@ public interface TensorFunctions {
 
 
     //TODO: describe this method
-    Tensor<Double> innerProduct();
+    Tensor<Double> innerProduct(Tensor<Double> tensor1, Tensor<Double> tensor2);
 
 
 }

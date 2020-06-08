@@ -1,6 +1,7 @@
 package tensors;
 
 
+import org.tensorics.core.lang.Tensorics;
 import org.tensorics.core.tensor.Tensor;
 
 public class Worker implements TensorFunctions {
@@ -14,27 +15,21 @@ public class Worker implements TensorFunctions {
     }
 
 
-    public Tensor<Double> mathematicalStructures() {
+    public Tensor<Double> addTensors(Tensor<Double> tensor1, Tensor<Double> tensor2) {
+        return null;
+    }
+
+    public Tensor<Double> subtractTensors(Tensor<Double> tensor1, Tensor<Double> tensor2) {
         return null;
     }
 
 
-    public Tensor<Double> addTensors() {
+    public Tensor<Double> multiplyTensors(Tensor<Double> tensor1, Tensor<Double> tensor2) {
         return null;
     }
 
 
-    public Tensor<Double> subtractTensors() {
-        return null;
-    }
-
-
-    public Tensor<Double> multiplierTensors() {
-        return null;
-    }
-
-
-    public Tensor<Double> divideTensors() {
+    public Tensor<Double> divideTensors(Tensor<Double> tensor1, Tensor<Double> tensor2) {
         return null;
     }
 
@@ -44,7 +39,7 @@ public class Worker implements TensorFunctions {
     }
 
 
-    public Tensor<Double> basicStatistics() {
+    public Tensor<Double> basicStatistics(Tensor<Double> tensor1) {
         return null;
     }
 
@@ -64,8 +59,10 @@ public class Worker implements TensorFunctions {
     }
 
 
-    public Tensor<Double> innerProduct() {
+    public Tensor<Double> innerProduct(Tensor<Double> tensor1, Tensor<Double> tensor2) {
         return null;
     }
+
+
 
 }
